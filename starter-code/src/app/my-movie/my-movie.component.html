@@ -1,0 +1,54 @@
+<div class="present-movie">
+  <div>
+    <p>ROOM {{movieItem?.room}}</p>
+    <h3>
+      {{movieItem?.title}}
+    </h3>
+  </div>
+
+  <div>
+    <img [src]="movieItem?.poster" alt="movie poster">
+  </div>
+  <div>
+    <div>
+      <h4>
+        Genres
+      </h4>
+      <h5 *ngFor="let oneGenre of movieItem?.genres">
+        {{oneGenre}}
+      </h5>
+      <h4>
+        Year
+      </h4>
+      <h5>
+        {{movieItem?.year}}
+      </h5>
+      <h4>
+        Director
+      </h4>
+      <h5>
+        {{movieItem?.director}}
+      </h5>
+      <h4>
+        Actors
+      </h4>
+      <h5 *ngFor="let oneActor of movieItem?.actors">
+        {{oneActor}}
+      </h5>
+      <h4>
+        Schedule
+      </h4>
+      <h5 *ngFor="let oneHour of movieItem?.hours">
+        {{oneHour}}
+      </h5>
+      <h4>
+        Synopsis
+      </h4>
+      <h5>
+        {{movieItem?.synopsis}}
+      </h5>
+
+      <button (click)="returnHome()">Home</button>
+    </div>
+  </div>
+</div>
